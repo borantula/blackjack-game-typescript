@@ -1,10 +1,6 @@
 import Head from "next/head";
-import { makeCard } from "../src/card";
-import { Suit, CardName } from "../src/constants";
 
 const Home = () => {
-  const playingCard = makeCard([CardName.Queen, Suit.Clubs]);
-  console.log(playingCard);
   return (
     <div className="container">
       <Head>

@@ -37,6 +37,8 @@ export const rankNames: Rank[] = [
   Rank.King
 ];
 
+export const suits = [Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades];
+
 export const picturedCards = [Rank.Jack, Rank.Queen, Rank.King];
 
 export const cardCodes = [
