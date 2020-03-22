@@ -9,7 +9,7 @@ export const addCardsToHand = (cards: Card[], hand: Hand) => {
   return pipe(cards, cards => cards.concat(hand.cards), makeHand);
 };
 
-// TODO: how can we refactor
+// TODO: how can we refactor for FP?
 export const getScore = (hand: Hand) => {
   let score = hand.cards.reduce((total, card) => {
     const cardScore = isPicturedCard(card)
