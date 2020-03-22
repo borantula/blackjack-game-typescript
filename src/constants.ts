@@ -1,3 +1,6 @@
+export const TWENTYONE = 21;
+export const PICTURE_CARD_VALUE = 10;
+
 export enum Suit {
   Clubs = "Clubs",
   Spades = "Spades",

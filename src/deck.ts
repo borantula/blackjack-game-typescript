@@ -1,14 +1,17 @@
-import { Deck } from "./types";
-import { rankNames, suits } from "./constants";
 import { comprehension, map, copy } from "fp-ts/lib/Array";
 import { tuple } from "fp-ts/lib/function";
-import { makeCard } from "./card";
 import { pipe } from "fp-ts/lib/pipeable";
+import randomString from "crypto-random-string";
+
+import { Deck } from "./types";
+import { rankNames, suits } from "./constants";
+import { makeCard } from "./card";
 
 export function makeDeck(): Deck {
   const cards = pipe(comprehension([rankNames, suits], tuple), map(makeCard));
 
   return {
+    id: randomString({ length: 10, type: "url-safe" }),
     cards,
     count: cards.length
   };

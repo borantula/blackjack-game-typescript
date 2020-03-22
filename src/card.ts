@@ -11,3 +11,5 @@ export const makeCard = ([rank, suit]: CardTuple): Card => ({
     firstLetter => `${firstLetter}${suit[0]}`
   ) as CardCode
 });
+
+export const isPicturedCard = (card: Card) => picturedCards.includes(card.rank);
