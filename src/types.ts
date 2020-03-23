@@ -7,7 +7,6 @@ export type CardTuple = [Rank, Suit];
 export type Deck = {
   id: string;
   cards: Card[];
-  count: number;
 };
 
 export type Card = {
